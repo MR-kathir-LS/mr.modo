@@ -1,0 +1,224 @@
+.clock-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.clock-container h1 {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.clocks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.clock-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.clock-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.clock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.clock-header h2 {
+  font-size: 1.3em;
+  color: #333;
+  margin: 0;
+}
+
+.remove-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #c0392b;
+}
+
+.digital-clock {
+  font-size: 3.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #667eea;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.clock-info {
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.clock-date {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.95em;
+  font-weight: 500;
+}
+
+.clock-offset {
+  margin: 5px 0;
+  color: #999;
+  font-size: 0.85em;
+}
+
+.analog-clock {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.analog-clock svg {
+  width: 100%;
+  height: 100%;
+}
+
+.timezone-selector {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.timezone-selector h3 {
+  text-align: center;
+  color: #333;
+  margin-top: 0;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.timezone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.timezone-btn {
+  padding: 12px 16px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #333;
+}
+
+.timezone-btn:hover {
+  border-color: #667eea;
+  background: #f0f4ff;
+}
+
+.timezone-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .clock-container {
+    padding: 20px 15px;
+  }
+
+  .clock-container h1 {
+    font-size: 2em;
+    margin-bottom: 25px;
+  }
+
+  .clocks-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .digital-clock {
+    font-size: 2.5em;
+  }
+
+  .clock-header h2 {
+    font-size: 1.1em;
+  }
+
+  .timezone-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .timezone-btn {
+    font-size: 0.85em;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clock-container {
+    padding: 15px 10px;
+  }
+
+  .clock-container h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .clock-card {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .digital-clock {
+    font-size: 2em;
+  }
+
+  .clock-header h2 {
+    font-size: 1em;
+  }
+
+  .analog-clock {
+    width: 150px;
+    height: 150px;
+  }
+
+  .timezone-grid {
+    grid-template-columns: 1fr;
+  }
+}
